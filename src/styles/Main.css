@@ -1,0 +1,38 @@
+img {
+    width: 25vw;
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75) !important;
+}
+
+.money {
+    width: 25vw;
+    border-radius: 15px !important;
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75) !important;
+
+    color: rgba(0, 0, 0, 0.54) !important;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+@media (max-width: 650px) {
+    img {
+        width: 30vw;
+    }
+    .money {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 500px) {
+    img {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 280px) {
+    .money {
+        font-size: 10px !important;
+    }
+}

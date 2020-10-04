@@ -1,0 +1,21 @@
+h2 {
+    color: rgba(0, 0, 0, 0.54) !important;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.table {
+    margin-left: 20vw;
+    margin-right: 20vw;
+
+    width: 60vw !important;
+}
+
+@media (max-width: 520px) {
+    .table {
+        margin-left: 5vw;
+        margin-right: 5vw;
+
+        width: 90vw !important;
+    }
+}

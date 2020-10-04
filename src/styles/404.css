@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.54) !important;
+}
+
+h1 {
+    font-size: 90px;
+    margin-top: 1vh;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 10px !important;
+}
