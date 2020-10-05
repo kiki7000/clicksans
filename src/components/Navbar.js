@@ -3,6 +3,7 @@ import clsx from 'clsx';
 
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {Link} from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -98,7 +99,7 @@ const Navbar = () => {
                     </IconButton>
 
                     <Typography variant = 'h6' noWrap>
-                        <a href = '/' style = {{color: 'white'}}>ClickSans</a>
+                        <Link to='/' style={{color: 'white'}}>ClickSans</Link>
                     </Typography>
                 </Toolbar>
             </AppBar>
