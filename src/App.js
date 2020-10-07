@@ -17,9 +17,8 @@ const App = () => {
     return (
         <>
             <CssBaseline />
-            <Navbar />
-
             <BrowserRouter>
+                <Navbar />
                 <Switch>
                     <Route exact path = '/' component = {Main} />
                     <Route path = '/store' component = {Store} />
