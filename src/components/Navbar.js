@@ -118,7 +118,7 @@ const Navbar = () => {
                     </IconButton>
                 </div>
                 <List>
-                    <NavItem name = 'Store' icon = {(<LocalGroceryStore />)} as={Link} to = '/store' />
+                    <NavItem name = 'Store' icon = {(<LocalGroceryStore />)} to = '/store' />
                 </List>
             </Drawer>
 
