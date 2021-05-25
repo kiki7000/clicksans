@@ -10,7 +10,8 @@ class Main extends Component {
         super()
 
         this.state = {
-            money: localStorage.money
+            money: localStorage.money,
+            level: localStorage.level
         }
 
         this.clickSans = this.clickSans.bind(this)
@@ -34,7 +35,7 @@ class Main extends Component {
     render(){
         return (
             <>
-                <img onClick = {this.clickSans} src = {process.env.PUBLIC_URL + '/sans.gif'} alt = 'Touch This!' />
+                <img onClick = {this.clickSans} src = {process.env.PUBLIC_URL + `/images/level${this.state.level}.gif`} alt = 'Touch This!' />
 
                 <Card className = 'money'>
                     <CardContent>
