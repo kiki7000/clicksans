@@ -40,13 +40,14 @@ class Main extends Component {
                     {this.state.money >= 200 * this.state.level ? (
                         <Button className = "levelUp" variant="contained" color="primary" onClick = {() => {
                             if (this.state.level < 5) {
+                                localStorage.level = this.state.level + 1
+                                localStorage.money = this.state.money - 200 * this.state.level
+                                localStorage.add = 1 + Number(localStorage.add)
+
                                 this.setState({
                                     level: this.state.level + 1,
                                     money: this.state.money - 200 * this.state.level
                                 })
-
-                                localStorage.level = this.state.level
-                                localStorage.money = this.state.money
                             }
                         }}>
                           Level up
