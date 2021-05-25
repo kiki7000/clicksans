@@ -2,6 +2,7 @@ import React from 'react';
 import './styles/App.css';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { SnackbarProvider } from 'notistack';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Main from './routes/Main';
@@ -16,7 +17,7 @@ const App = () => {
     if (!localStorage.level || localStorage.level > 5) localStorage.level = 1;
 
     return (
-        <>
+        <SnackbarProvider>
             <CssBaseline />
             <BrowserRouter>
                 <Navbar />
@@ -26,7 +27,7 @@ const App = () => {
                     <Route component = {NotFound} />
                 </Switch>
             </BrowserRouter>
-        </>
+        </SnackbarProvider>
     );
 }
 
