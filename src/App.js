@@ -13,7 +13,7 @@ import Navbar from './components/Navbar';
 const App = () => {
     if (!localStorage.money) localStorage.money = 0;
     if (!localStorage.add) localStorage.add = 1;
-    if (!localStorage.level) localStorage.level = 1;
+    if (!localStorage.level || localStorage.level > 5) localStorage.level = 1;
 
     return (
         <>

@@ -89,7 +89,7 @@ const Store = () => (
 
         <TableContainer className = 'table' component={Paper}>
             <Table aria-label="simple table">
-                <TableHead>
+                <TableHead className = "tablehead">
                     <TableRow>
                         <TableCell>Item Name</TableCell>
                         <TableCell align="right">Need Click Count</TableCell>

@@ -11,11 +11,28 @@ h2 {
     width: 60vw !important;
 }
 
-@media (max-width: 520px) {
+.smallrow {
+    display: none !important;
+}
+
+@media (max-width: 720px) {
     .table {
         margin-left: 5vw;
         margin-right: 5vw;
 
         width: 90vw !important;
+    }
+
+    thead {
+        display: none !important;
+    }
+
+    .smallrow {
+        display: table-row !important;
+        border-bottom: unset;
+    }
+
+    .normalrow {
+        display: none !important;
     }
 }
