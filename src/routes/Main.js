@@ -3,6 +3,7 @@ import '../styles/Main.css'
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 class Main extends Component {
@@ -11,7 +12,7 @@ class Main extends Component {
 
         this.state = {
             money: localStorage.money,
-            level: localStorage.level
+            level: Number(localStorage.level)
         }
 
         this.clickSans = this.clickSans.bind(this)
@@ -35,6 +36,24 @@ class Main extends Component {
     render(){
         return (
             <>
+                <div>
+                    {this.state.money >= 200 * this.state.level ? (
+                        <Button className = "levelUp" variant="contained" color="primary" onClick = {() => {
+                            if (this.state.level < 5) {
+                                this.setState({
+                                    level: this.state.level + 1,
+                                    money: this.state.money - 200 * this.state.level
+                                })
+
+                                localStorage.level = this.state.level
+                                localStorage.money = this.state.money
+                            }
+                        }}>
+                          Level up
+                        </Button>
+                    ) : null}
+                </div>
+
                 <img onClick = {this.clickSans} src = {process.env.PUBLIC_URL + `/images/level${this.state.level}.gif`} alt = 'Touch This!' />
 
                 <Card className = 'money'>
